@@ -4,11 +4,9 @@ import psutil
 def get_cpu_info():
     """Collect CPU utilization and core information."""
 
-    cpu_usage = psutil.cpu_percent(interval=None, percpu=True)
-
     return {
         "usage": psutil.cpu_percent(interval=None),
-        "per_core": cpu_usage,
+        "per_core": psutil.cpu_percent(interval=None, percpu=True),
         "physical_cores": psutil.cpu_count(logical=False),
         "logical_cores": psutil.cpu_count(logical=True)
     }

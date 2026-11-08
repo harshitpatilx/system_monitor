@@ -5,11 +5,7 @@ from PySide6.QtWidgets import (
     QHBoxLayout,
     QGridLayout,
     QGroupBox,
-    QProgressBar
-)
-from PySide6.QtWidgets import QGridLayout
-
-from PySide6.QtWidgets import (
+    QProgressBar,
     QTabWidget,
     QTableWidget,
     QTableWidgetItem,
@@ -17,15 +13,9 @@ from PySide6.QtWidgets import (
     QHeaderView
 )
 
-
 from PySide6.QtCore import QTimer
 
-from system_stats import (
-    get_cpu_info,
-    get_memory_info,
-    get_disk_info,
-    bytes_to_gb
-)
+from system_stats import *
 
 
 class MainWindow(QWidget):
